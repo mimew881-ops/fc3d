@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>福彩3D管理员后台</title>
+  <meta name="description" content="福彩3D单网页版开奖号码管理后台。">
+  <link rel="stylesheet" href="./admin.css">
+</head>
+<body>
+  <div class="admin-shell">
+    <header class="admin-topbar">
+      <div>
+        <p class="eyebrow">Single Web Admin</p>
+        <h1>福彩3D开奖号码后台</h1>
+        <p class="topbar-desc">开奖时间、当前期号、开奖号码、试机号都在这里维护。</p>
+      </div>
+      <div class="topbar-actions">
+        <a class="ghost-btn" href="./index.html">返回前台</a>
+      </div>
+    </header>
+
+    <section class="stat-grid">
+      <article class="stat-card">
+        <span>总记录数</span>
+        <strong id="totalCount">0</strong>
+        <p>当前浏览器已保存的开奖记录</p>
+      </article>
+      <article class="stat-card">
+        <span>当前期号</span>
+        <strong id="currentIssueStat">--</strong>
+        <p>首页和历史页都会读取这里</p>
+      </article>
+      <article class="stat-card">
+        <span>开奖时间</span>
+        <strong id="drawTimeStat">--</strong>
+        <p>首页倒计时和开奖节奏按这个时间执行</p>
+      </article>
+      <article class="stat-card">
+        <span>最新开奖号</span>
+        <strong id="latestResultStat">--</strong>
+        <p>取最新一条已保存记录</p>
+      </article>
+    </section>
+
+    <main class="admin-main">
+      <section class="main-left">
+        <section class="panel-card">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">核心参数</span>
+              <h2>后台配置</h2>
+            </div>
+          </div>
+          <div class="form-grid">
+            <label class="field">
+              <span>当前期号</span>
+              <input id="currentIssueInput" type="text" placeholder="例如 2026229">
+            </label>
+            <label class="field">
+              <span>开奖时间</span>
+              <input id="drawTimeInput" type="text" inputmode="numeric" placeholder="支持 22:15、6:03、6.03">
+            </label>
+          </div>
+          <div class="action-row">
+            <button class="primary-btn" id="saveConfigBtn" type="button">保存配置</button>
+            <button class="ghost-btn" id="resetConfigBtn" type="button">恢复默认</button>
+          </div>
+        </section>
+
+        <section class="panel-card">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">开奖录入</span>
+              <h2>新增 / 修改号码</h2>
+            </div>
+            <div class="action-row compact">
+              <button class="ghost-btn" id="newIssueBtn" type="button">新一期开奖</button>
+              <span class="tips-text">和值、跨度、形态自动识别</span>
+            </div>
+          </div>
+          <div class="form-grid">
+            <label class="field">
+              <span>开奖期号</span>
+              <input id="issueInput" type="text" placeholder="例如 2026229">
+            </label>
+            <label class="field">
+              <span>开奖日期</span>
+              <input id="dateInput" type="date">
+            </label>
+            <label class="field">
+              <span>试机号</span>
+              <input id="testInput" type="text" placeholder="例如 471">
+            </label>
+          </div>
+          <div class="number-grid">
+            <label class="field">
+              <span>百位</span>
+              <input id="digit1" type="number" min="0" max="9" value="0">
+            </label>
+            <label class="field">
+              <span>十位</span>
+              <input id="digit2" type="number" min="0" max="9" value="0">
+            </label>
+            <label class="field">
+              <span>个位</span>
+              <input id="digit3" type="number" min="0" max="9" value="0">
+            </label>
+          </div>
+          <div class="auto-metric-grid">
+            <label class="field readonly-field">
+              <span>和值</span>
+              <input id="sumValueField" type="text" value="--" readonly>
+            </label>
+            <label class="field readonly-field">
+              <span>跨度</span>
+              <input id="spanValueField" type="text" value="--" readonly>
+            </label>
+            <label class="field readonly-field">
+              <span>形态</span>
+              <input id="shapeValueField" type="text" value="--" readonly>
+            </label>
+          </div>
+          <div class="preview-box" id="calcPreview">和值 -- | 跨度 -- | 形态 --</div>
+          <div class="action-row">
+            <button class="primary-btn" id="saveResultBtn" type="button">保存开奖号码</button>
+            <button class="ghost-btn" id="clearFormBtn" type="button">一键清空</button>
+          </div>
+        </section>
+
+        <section class="panel-card">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">历史记录</span>
+              <h2>开奖记录管理</h2>
+            </div>
+            <div class="action-row compact">
+              <button class="ghost-btn" id="exportBtn" type="button">导出数据</button>
+              <label class="ghost-btn file-btn" for="importInput">导入数据</label>
+              <input id="importInput" type="file" accept="application/json" hidden>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th>期号</th>
+                  <th>日期</th>
+                  <th>号码</th>
+                  <th>试机号</th>
+                  <th>和值</th>
+                  <th>跨度</th>
+                  <th>形态</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody id="resultTableBody"></tbody>
+            </table>
+          </div>
+          <div class="empty-state" id="emptyState" hidden>当前还没有开奖记录，先录入一条试试。</div>
+        </section>
+      </section>
+
+      <aside class="main-right">
+        <section class="panel-card">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">实时状态</span>
+              <h2>开奖看板</h2>
+            </div>
+          </div>
+          <div class="status-list">
+            <div class="status-item">
+              <span>当前时间</span>
+              <strong id="nowTime">--</strong>
+            </div>
+            <div class="status-item">
+              <span>开奖倒计时</span>
+              <strong id="countdownValue">--</strong>
+            </div>
+            <div class="status-item">
+              <span>当前状态</span>
+              <strong id="stageValue" class="stage-badge">待开奖</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel-card">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">滚动日志</span>
+              <h2>后台日志</h2>
+            </div>
+            <button class="ghost-btn" id="clearLogBtn" type="button">清空日志</button>
+          </div>
+          <div class="log-console" id="logConsole"></div>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script src="./fc3d-data.js?v=20260826"></script>
+  <script src="./admin.js?v=20260826"></script>
+</body>
+</html>

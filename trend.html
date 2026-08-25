@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>台灣3D福彩 - 走勢圖</title>
+  <meta
+    name="description"
+    content="台灣3D福彩走勢圖頁面，提供百位、十位、個位走勢、冷熱號與近期遺漏資訊。"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="trend-page">
+  <div class="site-topline">
+    <div class="container site-topline-inner">
+      <span>歡迎造訪台灣3D福彩</span>
+      <span>開獎時間：每日 22:15</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-main">
+      <div class="brand">
+        <div class="brand-mark">福</div>
+        <div class="brand-copy">
+          <p class="brand-subtitle">台灣3D福彩資訊服務平台</p>
+          <h1>台灣3D福彩</h1>
+        </div>
+      </div>
+      <div class="header-side">
+        <p>查詢類別：<strong>走勢圖</strong></p>
+        <p>資訊更新時間：20:30</p>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="主導覽">
+      <div class="container nav-list">
+        <a class="nav-item" data-label="首頁" href="./index.html">首頁</a>
+        <a class="nav-item" data-label="開獎歷史" href="./history.html">開獎歷史</a>
+        <a class="nav-item active" data-label="走勢圖" href="./trend.html" aria-current="page">走勢圖</a>
+        <a class="nav-item" data-label="福彩圖庫" href="./gallery.html">福彩圖庫</a>
+        <a class="nav-item" data-label="專家預測" href="./experts.html">專家預測</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container page-main">
+    <div class="breadcrumb-bar">
+      <a href="./index.html">首頁</a>
+      <span>/</span>
+      <strong>走勢圖</strong>
+    </div>
+
+    <section class="panel history-query-panel">
+      <div class="panel-title">
+        <h2>走勢圖查詢</h2>
+        <span>依期數區間與分位查看</span>
+      </div>
+      <form class="query-form" action="javascript:void(0)">
+        <div class="query-grid">
+          <label class="form-field">
+            <span>彩種</span>
+            <select>
+              <option selected>3D福彩</option>
+              <option>今彩539</option>
+              <option>4星彩</option>
+            </select>
+          </label>
+          <label class="form-field">
+            <span>查詢期數</span>
+            <select>
+              <option>近 10 期</option>
+              <option selected>近 20 期</option>
+              <option>近 30 期</option>
+            </select>
+          </label>
+          <label class="form-field">
+            <span>分位切換</span>
+            <select>
+              <option selected>綜合走勢</option>
+              <option>百位走勢</option>
+              <option>十位走勢</option>
+              <option>個位走勢</option>
+            </select>
+          </label>
+          <label class="form-field">
+            <span>起始期號</span>
+            <input type="text" value="2026209" placeholder="請輸入起始期號">
+          </label>
+        </div>
+        <div class="query-actions">
+          <button class="query-btn primary-btn" type="submit">開始查詢</button>
+          <button class="query-btn secondary-btn" type="reset">重新選擇</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="trend-layout">
+      <section class="panel">
+        <div class="panel-title">
+          <h2>近期走勢總覽</h2>
+          <span>近 20 期資料</span>
+        </div>
+
+        <div class="history-summary">
+          <div class="summary-item">
+            <span>熱號</span>
+            <strong>3 / 5 / 8</strong>
+          </div>
+          <div class="summary-item">
+            <span>冷號</span>
+            <strong>0 / 4 / 9</strong>
+          </div>
+          <div class="summary-item">
+            <span>最長遺漏</span>
+            <strong>12 期</strong>
+          </div>
+        </div>
+
+        <div class="trend-legend">
+          <span><i class="legend-dot hot"></i>當期命中</span>
+          <span><i class="legend-dot warm"></i>熱區號碼</span>
+          <span><i class="legend-dot miss"></i>一般遺漏</span>
+        </div>
+
+        <div class="mobile-trend-cards">
+          <article class="mobile-trend-card active">
+            <div class="mobile-trend-head">
+              <strong>2026228</strong>
+              <span>最新一期</span>
+            </div>
+            <div class="mobile-trend-balls">
+              <b>0</b>
+              <b>2</b>
+              <b>8</b>
+            </div>
+            <p>百位 0 / 十位 2 / 個位 8</p>
+          </article>
+          <article class="mobile-trend-card">
+            <div class="mobile-trend-head">
+              <strong>2026227</strong>
+              <span>前一期</span>
+            </div>
+            <div class="mobile-trend-balls">
+              <b>4</b>
+              <b>1</b>
+              <b>7</b>
+            </div>
+            <p>百位 4 / 十位 1 / 個位 7</p>
+          </article>
+          <article class="mobile-trend-card">
+            <div class="mobile-trend-head">
+              <strong>2026226</strong>
+              <span>近三期</span>
+            </div>
+            <div class="mobile-trend-balls">
+              <b>9</b>
+              <b>3</b>
+              <b>3</b>
+            </div>
+            <p>百位 9 / 十位 3 / 個位 3</p>
+          </article>
+        </div>
+
+        <div class="table-wrap">
+          <table class="trend-table">
+            <thead>
+              <tr>
+                <th rowspan="2">期號</th>
+                <th colspan="10">百位走勢</th>
+                <th colspan="10">十位走勢</th>
+                <th colspan="10">個位走勢</th>
+              </tr>
+              <tr>
+                <th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th>
+                <th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th>
+                <th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="issue-cell">2026228</td>
+                <td class="hit-cell">0</td><td class="miss-cell">2</td><td class="miss-cell">5</td><td class="miss-cell">1</td><td class="miss-cell">3</td><td class="miss-cell">4</td><td class="miss-cell">8</td><td class="miss-cell">6</td><td class="miss-cell">7</td><td class="miss-cell">9</td>
+                <td class="miss-cell">2</td><td class="miss-cell">6</td><td class="hit-cell">2</td><td class="miss-cell">3</td><td class="miss-cell">7</td><td class="miss-cell">1</td><td class="miss-cell">4</td><td class="miss-cell">8</td><td class="miss-cell">5</td><td class="miss-cell">9</td>
+                <td class="miss-cell">6</td><td class="miss-cell">3</td><td class="miss-cell">2</td><td class="miss-cell">1</td><td class="miss-cell">5</td><td class="miss-cell">7</td><td class="miss-cell">4</td><td class="miss-cell">8</td><td class="hit-cell">8</td><td class="miss-cell">9</td>
+              </tr>
+              <tr>
+                <td class="issue-cell">2026227</td>
+                <td class="miss-cell">3</td><td class="miss-cell">1</td><td class="miss-cell">4</td><td class="miss-cell">2</td><td class="hit-cell">4</td><td class="miss-cell">6</td><td class="miss-cell">7</td><td class="miss-cell">5</td><td class="miss-cell">8</td><td class="miss-cell">9</td>
+                <td class="miss-cell">4</td><td class="hit-cell">1</td><td class="miss-cell">6</td><td class="miss-cell">5</td><td class="miss-cell">3</td><td class="miss-cell">2</td><td class="miss-cell">7</td><td class="miss-cell">8</td><td class="miss-cell">9</td><td class="miss-cell">10</td>
+                <td class="miss-cell">6</td><td class="miss-cell">2</td><td class="miss-cell">5</td><td class="miss-cell">1</td><td class="miss-cell">7</td><td class="miss-cell">4</td><td class="miss-cell">8</td><td class="hit-cell">7</td><td class="miss-cell">3</td><td class="miss-cell">9</td>
+              </tr>
+              <tr>
+                <td class="issue-cell">2026226</td>
+                <td class="miss-cell">2</td><td class="miss-cell">4</td><td class="miss-cell">6</td><td class="miss-cell">5</td><td class="miss-cell">1</td><td class="miss-cell">7</td><td class="miss-cell">3</td><td class="miss-cell">8</td><td class="miss-cell">9</td><td class="hit-cell">9</td>
+                <td class="miss-cell">4</td><td class="miss-cell">2</td><td class="miss-cell">6</td><td class="hit-cell">3</td><td class="miss-cell">5</td><td class="miss-cell">1</td><td class="miss-cell">7</td><td class="miss-cell">8</td><td class="miss-cell">9</td><td class="miss-cell">10</td>
+                <td class="miss-cell">4</td><td class="miss-cell">2</td><td class="miss-cell">6</td><td class="hit-cell">3</td><td class="miss-cell">5</td><td class="miss-cell">1</td><td class="miss-cell">7</td><td class="miss-cell">8</td><td class="miss-cell">9</td><td class="miss-cell">10</td>
+              </tr>
+              <tr>
+                <td class="issue-cell">2026225</td>
+                <td class="miss-cell">3</td><td class="miss-cell">1</td><td class="hit-cell">2</td><td class="miss-cell">5</td><td class="miss-cell">4</td><td class="miss-cell">6</td><td class="miss-cell">7</td><td class="miss-cell">8</td><td class="miss-cell">9</td><td class="miss-cell">10</td>
+                <td class="miss-cell">4</td><td class="miss-cell">2</td><td class="miss-cell">5</td><td class="miss-cell">1</td><td class="miss-cell">6</td><td class="miss-cell">7</td><td class="miss-cell">3</td><td class="miss-cell">8</td><td class="hit-cell">8</td><td class="miss-cell">9</td>
+                <td class="miss-cell">3</td><td class="miss-cell">2</td><td class="miss-cell">6</td><td class="miss-cell">1</td><td class="miss-cell">4</td><td class="hit-cell">5</td><td class="miss-cell">7</td><td class="miss-cell">8</td><td class="miss-cell">9</td><td class="miss-cell">10</td>
+              </tr>
+              <tr>
+                <td class="issue-cell">2026224</td>
+                <td class="miss-cell">2</td><td class="miss-cell">3</td><td class="miss-cell">5</td><td class="miss-cell">1</td><td class="miss-cell">6</td><td class="miss-cell">7</td><td class="hit-cell">6</td><td class="miss-cell">4</td><td class="miss-cell">8</td><td class="miss-cell">9</td>
+                <td class="miss-cell">5</td><td class="miss-cell">2</td><td class="miss-cell">6</td><td class="miss-cell">1</td><td class="hit-cell">4</td><td class="miss-cell">3</td><td class="miss-cell">7</td><td class="miss-cell">8</td><td class="miss-cell">9</td><td class="miss-cell">10</td>
+                <td class="hit-cell">0</td><td class="miss-cell">3</td><td class="miss-cell">5</td><td class="miss-cell">1</td><td class="miss-cell">6</td><td class="miss-cell">7</td><td class="miss-cell">2</td><td class="miss-cell">4</td><td class="miss-cell">8</td><td class="miss-cell">9</td>
+              </tr>
+              <tr>
+                <td class="issue-cell">2026223</td>
+                <td class="miss-cell">4</td><td class="hit-cell">1</td><td class="miss-cell">5</td><td class="miss-cell">2</td><td class="miss-cell">6</td><td class="miss-cell">7</td><td class="miss-cell">3</td><td class="miss-cell">8</td><td class="miss-cell">9</td><td class="miss-cell">10</td>
+                <td class="miss-cell">3</td><td class="miss-cell">2</td><td class="miss-cell">6</td><td class="miss-cell">1</td><td class="miss-cell">4</td><td class="hit-cell">5</td><td class="miss-cell">7</td><td class="miss-cell">8</td><td class="miss-cell">9</td><td class="miss-cell">10</td>
+                <td class="miss-cell">4</td><td class="miss-cell">2</td><td class="miss-cell">6</td><td class="miss-cell">1</td><td class="miss-cell">5</td><td class="miss-cell">7</td><td class="miss-cell">3</td><td class="miss-cell">8</td><td class="hit-cell">8</td><td class="miss-cell">9</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside class="trend-side">
+        <section class="panel">
+          <div class="panel-title">
+            <h2>分位統計</h2>
+            <span>近 20 期</span>
+          </div>
+          <div class="stat-block">
+            <h3>百位熱號</h3>
+            <p>5、4、1</p>
+          </div>
+          <div class="stat-block">
+            <h3>十位熱號</h3>
+            <p>8、5、3</p>
+          </div>
+          <div class="stat-block">
+            <h3>個位熱號</h3>
+            <p>2、7、8</p>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title">
+            <h2>遺漏摘要</h2>
+            <span>即時參考</span>
+          </div>
+          <ul class="simple-list">
+            <li>百位目前遺漏最長號碼：9，已連續 9 期未開出。</li>
+            <li>十位近期最活躍號碼：8，近 5 期出現 2 次。</li>
+            <li>個位近期穩定號碼：2、5、8，分布較平均。</li>
+          </ul>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>台灣3D福彩僅提供資訊展示服務，走勢圖頁面已補充為更接近傳統彩券查詢頁的表格化走勢呈現。</p>
+    </div>
+  </footer>
+
+  <script src="./fc3d-data.js?v=20260826"></script>
+  <script src="./script.js?v=20260826"></script>
+</body>
+</html>
