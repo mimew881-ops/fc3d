@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>台灣3D福彩 - 福彩圖庫</title>
+  <meta
+    name="description"
+    content="台灣3D福彩圖庫頁面，提供每日圖庫、藏機圖、整理海報與近期期數資料瀏覽。"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="gallery-page">
+  <div class="site-topline">
+    <div class="container site-topline-inner">
+      <span>歡迎造訪台灣3D福彩</span>
+      <span>開獎時間：每日 22:15</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-main">
+      <div class="brand">
+        <div class="brand-mark">福</div>
+        <div class="brand-copy">
+          <p class="brand-subtitle">台灣3D福彩資訊服務平台</p>
+          <h1>台灣3D福彩</h1>
+        </div>
+      </div>
+      <div class="header-side">
+        <p>查詢類別：<strong>福彩圖庫</strong></p>
+        <p>資訊更新時間：20:30</p>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="主導覽">
+      <div class="container nav-list">
+        <a class="nav-item" data-label="首頁" href="./index.html">首頁</a>
+        <a class="nav-item" data-label="開獎歷史" href="./history.html">開獎歷史</a>
+        <a class="nav-item" data-label="走勢圖" href="./trend.html">走勢圖</a>
+        <a class="nav-item active" data-label="福彩圖庫" href="./gallery.html" aria-current="page">福彩圖庫</a>
+        <a class="nav-item" data-label="專家預測" href="./experts.html">專家預測</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container page-main">
+    <div class="breadcrumb-bar">
+      <a href="./index.html">首頁</a>
+      <span>/</span>
+      <strong>福彩圖庫</strong>
+    </div>
+
+    <section class="panel history-query-panel">
+      <div class="panel-title">
+        <h2>圖庫資料查詢</h2>
+        <span>依日期與分類查看</span>
+      </div>
+      <form class="query-form" action="javascript:void(0)">
+        <div class="query-grid">
+          <label class="form-field">
+            <span>資料分類</span>
+            <select>
+              <option selected>每日圖庫</option>
+              <option>藏機圖</option>
+              <option>重點整理</option>
+            </select>
+          </label>
+          <label class="form-field">
+            <span>查詢年度</span>
+            <select>
+              <option>2024</option>
+              <option selected>2025</option>
+              <option>2026</option>
+            </select>
+          </label>
+          <label class="form-field">
+            <span>查詢月份</span>
+            <select>
+              <option>06</option>
+              <option>07</option>
+              <option selected>08</option>
+            </select>
+          </label>
+          <label class="form-field">
+            <span>資料關鍵字</span>
+            <input type="text" value="本週圖庫" placeholder="請輸入關鍵字">
+          </label>
+        </div>
+        <div class="query-actions">
+          <button class="query-btn primary-btn" type="submit">開始查詢</button>
+          <button class="query-btn secondary-btn" type="reset">重新選擇</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="gallery-layout">
+      <section class="panel">
+        <div class="panel-title">
+          <h2>最新圖庫</h2>
+          <span>近 6 筆更新</span>
+        </div>
+        <div class="gallery-mobile-tags">
+          <span>本期整理</span>
+          <span>對照版</span>
+          <span>重點摘要</span>
+        </div>
+        <div class="mobile-gallery-feed">
+          <article class="mobile-gallery-item">
+            <div class="mobile-gallery-thumb thumb-daily" aria-hidden="true">
+              <span>每日圖庫</span>
+              <strong>028</strong>
+              <em>本期整理</em>
+            </div>
+            <div class="mobile-gallery-copy">
+              <span>每日圖庫</span>
+              <h3>第2026228期圖庫整理</h3>
+              <p>整理當期主圖、重點註記與簡版摘要，手機上可直接快速瀏覽。</p>
+            </div>
+          </article>
+          <article class="mobile-gallery-item">
+            <div class="mobile-gallery-thumb thumb-hidden" aria-hidden="true">
+              <span>藏機圖</span>
+              <strong>本週</strong>
+              <em>對照版</em>
+            </div>
+            <div class="mobile-gallery-copy">
+              <span>藏機圖</span>
+              <h3>本週藏機圖專區</h3>
+              <p>集中收錄對照圖與文字說明，方便手機用戶快速往下滑查看。</p>
+            </div>
+          </article>
+          <article class="mobile-gallery-item">
+            <div class="mobile-gallery-thumb thumb-summary" aria-hidden="true">
+              <span>重點整理</span>
+              <strong>和值</strong>
+              <em>跨度摘要</em>
+            </div>
+            <div class="mobile-gallery-copy">
+              <span>重點整理</span>
+              <h3>近期期數重點海報</h3>
+              <p>將近期號碼、和值與跨度整理成更適合手機閱讀的縮圖列表。</p>
+            </div>
+          </article>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <div class="gallery-thumb thumb-daily" aria-hidden="true">
+              <span>每日圖庫</span>
+              <strong>028</strong>
+              <em>本期主圖</em>
+            </div>
+            <div class="gallery-card-body">
+              <span>每日圖庫</span>
+              <h3>第2026228期圖庫整理</h3>
+              <p>收錄當期主圖、重點線索與版面摘要，方便快速查看。</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <div class="gallery-thumb thumb-hidden" aria-hidden="true">
+              <span>藏機圖</span>
+              <strong>本週</strong>
+              <em>對照分析</em>
+            </div>
+            <div class="gallery-card-body">
+              <span>藏機圖</span>
+              <h3>本週藏機圖專區</h3>
+              <p>集中展示本週期數相關圖卡與文字註記，便於對照查閱。</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <div class="gallery-thumb thumb-summary" aria-hidden="true">
+              <span>重點整理</span>
+              <strong>近10期</strong>
+              <em>和值跨度</em>
+            </div>
+            <div class="gallery-card-body">
+              <span>重點整理</span>
+              <h3>近期期數重點海報</h3>
+              <p>以較清楚的版型整理近期號碼分布、和值與跨度重點。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <aside class="gallery-side">
+        <section class="panel">
+          <div class="panel-title">
+            <h2>圖庫說明</h2>
+            <span>使用方式</span>
+          </div>
+          <ul class="simple-list">
+            <li>圖庫內容依日期與分類整理，可快速檢索近期期數資料。</li>
+            <li>每張圖卡均搭配簡短摘要，方便在手機與桌機上瀏覽。</li>
+            <li>圖庫內容僅供資訊參考，請搭配歷史與走勢頁一併閱讀。</li>
+          </ul>
+        </section>
+      </aside>
+    </section>
+
+    <section class="panel gallery-records-panel">
+      <div class="panel-title">
+        <h2>近期期數資料列表</h2>
+        <span>圖庫更新記錄</span>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>期號</th>
+              <th>更新日期</th>
+              <th>資料分類</th>
+              <th>圖庫標題</th>
+              <th>說明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2026228</td>
+              <td>2026-08-24</td>
+              <td>每日圖庫</td>
+              <td>第2026228期圖庫整理</td>
+              <td>包含當期主圖、簡析與版面摘要。</td>
+            </tr>
+            <tr>
+              <td>2026227</td>
+              <td>2026-08-23</td>
+              <td>藏機圖</td>
+              <td>本週藏機圖整理</td>
+              <td>彙整藏機圖與對照說明。</td>
+            </tr>
+            <tr>
+              <td>2026226</td>
+              <td>2026-08-22</td>
+              <td>重點整理</td>
+              <td>近 10 期圖卡彙整</td>
+              <td>整理近期號碼重點與期數摘要。</td>
+            </tr>
+            <tr>
+              <td>2026225</td>
+              <td>2026-08-21</td>
+              <td>每日圖庫</td>
+              <td>期數觀察圖卡</td>
+              <td>對照和值、跨度與當期號碼。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>台灣3D福彩僅提供資訊展示服務，福彩圖庫頁面已補充為更接近傳統資料索引頁的卡片與列表混合版型。</p>
+    </div>
+  </footer>
+
+  <script src="./fc3d-data.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
